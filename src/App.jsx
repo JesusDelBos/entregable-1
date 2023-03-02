@@ -11,28 +11,28 @@ import fondo4 from './fondos/fondo4.jpg'
 
 function App() {
   
-  const [ index, setIndex ] = useState(0)
+  const [ index, setIndex ] = useState(1)
 
   const changePhrase = () =>{
-    console.log("CambioUsuario")
-    setIndex(index +1)
+  
+    setIndex(Math.floor(Math.random()*14))
   }
   //const fondos [fondo1]
 const [ indexFondo, setIndexFondo ] = useState( 0 )
 const fondosVarios =[ fondo1, fondo2, fondo3, fondo4 ]
 const changeFondo = ()=>{
-  setIndexFondo(Math.floor(Math.random()*fondosVarios.length))
- /* if(indexFondo === (fondosVarios.length-1) ){
+ // setIndexFondo(Math.floor(Math.random()*4))
+  if(index === (fondosVarios.length-1) ){
     setIndexFondo(0)
   }else{
     setIndexFondo(indexFondo + 1)
-  }*/
+  }
 }
   //console.log(Phrases[0])
   return (
     <div className="App" >
      <h1 className='titulo'>GALLETAS DE LA FORTUNA</h1>
-     <img src={ fondosVarios[indexFondo] } alt="" />
+     <img src={ fondosVarios[Math.floor(Math.random()*4)] } alt="" />
      <div className='cajaTexto'>
       <Texto 
       galletaSuerte={ Phrases[index]}
@@ -45,7 +45,7 @@ const changeFondo = ()=>{
       </div>
       <br />
       <div className='botonCambios'>
-      <button onClick={changePhrase, changeFondo}>Ver Otro</button>
+      <button onClick={changePhrase}>Ver Otro</button>
       </div>
     </div>
   )

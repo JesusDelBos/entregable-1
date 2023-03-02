@@ -15,13 +15,15 @@
 .cajaTexto{
     background-color: rgb(209, 218, 218);
     position: absolute;
-    margin-top: -500px;
+    margin-top: -600px;
     margin-left: 20%;
     margin-right: 20%;
+    width: 500px;
+    height: 90px;
 }
 
 .botonCambios{
     position: absolute;
-    margin-top: -400px;
+    margin-top: -500px;
     margin-left: 50%;
 }
